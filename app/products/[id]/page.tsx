@@ -1,34 +1,19 @@
-import { notFound } from 'next/navigation';
+import getProducts, { getProductById } from '@/app/api/products';
 import Image from 'next/image';
 import styles from './page.module.css';
 
 export const dynamicParams = true;
 
 export async function generateStaticParams(): Promise<{ id: string }[] | any> {
-	const response = await fetch('https://fakestoreapi.com/products');
-	const products = await response.json();
+	const products = await getProducts();
 
 	return products.map((product) => ({
 		id: product.id.toString(),
 	}));
 }
 
-async function getProduct(id) {
-	const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
-		next: {
-			revalidate: 60,
-		},
-	});
-
-	if (!response.ok) {
-		notFound();
-	}
-
-	return response.json();
-}
-
-export default async function ProductDetails({ params }) {
-	const product = await getProduct(params.id);
+export default async function ProductDetails({ params }: { params: { id: string } }) {
+	const product = await getProductById(params.id);
 
 	return (
 		<main className={styles.main}>
