@@ -1,4 +1,4 @@
-import ProductsList from '../components/ProductsList';
+import ProductsList from '../components/organisms/ProductsList';
 import getProducts from '../api/products';
 
 export default async function Products() {

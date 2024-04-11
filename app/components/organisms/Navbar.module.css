@@ -10,11 +10,6 @@
 	color: var(--neutral-dark-gray);
 }
 
-.logo {
-	max-height: 150px;
-	max-width: 150px;
-}
-
 .navLinks {
 	display: flex;
 	gap: 3rem;

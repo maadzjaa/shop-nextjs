@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import EmailForm from './EmailForm';
+import EmailForm from '../atoms/EmailForm';
 import { FaInstagram } from 'react-icons/fa';
 import { ImPinterest2 } from 'react-icons/im';
 import { CiFacebook } from 'react-icons/ci';

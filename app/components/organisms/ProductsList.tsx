@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ProductsList.module.css';
-import { Product } from '../api/products';
+import { Product } from '../../api/products';
 
 export default async function ProductsList({ products }: { products: Product[] }) {
 	return (
