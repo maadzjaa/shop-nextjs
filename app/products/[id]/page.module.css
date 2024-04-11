@@ -1,0 +1,15 @@
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+}
+
+.image {
+	max-width: 300px;
+}
+
+.about {
+	max-width: 500px;
+}

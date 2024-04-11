@@ -11,6 +11,7 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	padding: 30px;
 }
 
 img,
@@ -46,5 +47,19 @@ h6 {
 
 a {
 	text-decoration: none;
+	color: var(--neutral-dark-gray);
 }
 
+input:focus {
+	outline: none;
+}
+
+:root {
+	--main-beige: #a18a68;
+	--main-white: #ffffff;
+	--main-black: #000000;
+	--neutral-dark-gray: #707070;
+	--neutral-gray: #d8d8d8;
+	--neutral-light-gray: #efefef;
+	--error: #d82700;
+}

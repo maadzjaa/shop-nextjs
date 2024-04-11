@@ -1,0 +1,10 @@
+.emailForm {
+	display: flex;
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--neutral-dark-gray);
+}
+
+.emailInput {
+	border: none;
+	width: 300px;
+}

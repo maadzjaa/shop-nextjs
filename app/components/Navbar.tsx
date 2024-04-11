@@ -2,7 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from './shop-logo.png';
 import styles from './Navbar.module.css';
-import Cart from './cart.png';
+import { IoCartOutline } from 'react-icons/io5';
+import { IoIosSearch } from 'react-icons/io';
+import { CiUser } from 'react-icons/ci';
+
 import ActiveLink from './ActiveLink';
 
 export default function Navbar() {
@@ -10,13 +13,18 @@ export default function Navbar() {
 		<nav className={styles.navbar}>
 			<Image src={Logo} alt='shop logo' className={styles.logo}></Image>
 			<div className={styles.navLinks}>
-				<ActiveLink href='/'>Dashboard</ActiveLink>
-				<ActiveLink href='/products'>All products</ActiveLink>
-				<ActiveLink href='/categories'>Categories</ActiveLink>
-			</div>
-			<div className={styles.cart}>
+				<ActiveLink href='/'>Shop</ActiveLink>
+				<ActiveLink href='/products'>Blog</ActiveLink>
+				<ActiveLink href='/categories'>Our Story</ActiveLink>
+				
 				<Link href='/cart'>
-					<Image src={Cart} alt='shopping cart'></Image>
+					<IoIosSearch size={30} />
+				</Link>
+				<Link href='/cart'>
+					<IoCartOutline size={30} />
+				</Link>
+				<Link href='/cart'>
+					<CiUser size={30} />
 				</Link>
 			</div>
 		</nav>

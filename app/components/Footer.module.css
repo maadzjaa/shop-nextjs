@@ -1,0 +1,28 @@
+.footer {
+	margin: 0 auto;
+	max-width: 90vw;
+	padding: 20px 0 40px 0;
+	border-top: 2px solid var(--neutral-light-gray);
+}
+
+.topFooter,
+.bottomFooter {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 10px;
+}
+
+.links {
+	display: flex;
+	text-transform: uppercase;
+	gap: 50px;
+}
+
+.icons {
+	display: flex;
+	gap: 20px;
+}
+
+.icons a {
+	color: var(--main-black);
+}

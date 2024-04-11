@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import styles from './page.module.css';
 
 export const dynamicParams = true;
 
@@ -30,13 +31,17 @@ export default async function ProductDetails({ params }) {
 	const product = await getProduct(params.id);
 
 	return (
-		<main>
-			<h2> {product.title}</h2>
-			<Image src={product.image} width={500} height={300} alt={product.title} />
-			<p className='product-price'>{product.price} EUR</p>
-			<p className='product-description'> {product.description}</p>
-			<p className='product-rating'>Rate: {product.rating.rate}/5</p>
-			<p className='product-number-of-ratings'>Number of ratings: {product.rating.count}</p>
+		<main className={styles.main}>
+			<div className={styles.image}>
+				<Image src={product.image} width={500} height={300} alt={product.title} />
+			</div>
+			<div className={styles.about}>
+				<h2> {product.title}</h2>
+				<p className='product-price'>{product.price} EUR</p>
+				<p className='product-description'> {product.description}</p>
+				<p className='product-rating'>Rate: {product.rating.rate}/5</p>
+				<p className='product-number-of-ratings'>Number of ratings: {product.rating.count}</p>
+			</div>
 		</main>
 	);
 }

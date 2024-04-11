@@ -1,8 +1,13 @@
 .navbar {
 	display: flex;
 	align-items: center;
-	background-color: #ffffff;
-	color: #4e2525;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0px 30px;
+}
+
+.navbar a {
+	color: var(--neutral-dark-gray);
 }
 
 .logo {
@@ -12,20 +17,16 @@
 
 .navLinks {
 	display: flex;
-	gap: 1rem;
+	gap: 3rem;
 }
 
 .navLinks a {
-	color: #4e2525;
+	color: var(--main-black);
 	text-decoration: none;
 	font-size: 1.1rem;
-	transition: color 1s ease;
+	transition: all 0.2s ease-in-out;
 }
 
 .navLinks a:hover {
-	color: #a12424;
+	font-size: 1.2rem;
 }
-
-/* .cart {
-
-} */
