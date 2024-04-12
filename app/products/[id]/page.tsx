@@ -1,4 +1,4 @@
-import getProducts, { getProductById } from '@/app/api/products';
+import getProducts, { getProductById } from '@/api/products';
 import styles from './page.module.css';
 
 export const dynamicParams = true;

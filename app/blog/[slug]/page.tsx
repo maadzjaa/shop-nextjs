@@ -1,5 +1,5 @@
 import { getPost, getPosts } from '@/utils/posts';
-import { Post } from '@/app/components/organisms/Post';
+import { Post } from '@/components/organisms/Post';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {

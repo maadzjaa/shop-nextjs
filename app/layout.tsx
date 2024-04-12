@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import Navbar from './components/organisms/Navbar';
-import Footer from './components/organisms/Footer';
+import Navbar from '../components/organisms/Navbar';
+import Footer from '../components/organisms/Footer';
 
 const dmsans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '700'] });
 
