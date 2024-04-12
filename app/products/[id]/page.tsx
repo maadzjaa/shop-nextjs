@@ -1,5 +1,4 @@
 import getProducts, { getProductById } from '@/app/api/products';
-import Image from 'next/image';
 import styles from './page.module.css';
 
 export const dynamicParams = true;
@@ -18,7 +17,7 @@ export default async function ProductDetails({ params }: { params: { id: string 
 	return (
 		<main className={styles.main}>
 			<div className={styles.image}>
-				<Image src={product.image} width={500} height={300} alt={product.title} />
+				<img src={product.image} width={500} height={300} alt={product.title} />
 			</div>
 			<div className={styles.about}>
 				<h2> {product.title}</h2>
