@@ -15,7 +15,7 @@ export default function Navbar() {
 			</Link>
 			<div className={styles.navLinks}>
 				<ActiveLink href='/'>Shop</ActiveLink>
-				<ActiveLink href='/products'>Blog</ActiveLink>
+				<ActiveLink href='/blog'>Blog</ActiveLink>
 				<ActiveLink href='/categories'>Our Story</ActiveLink>
 
 				<Link href='/cart'>
