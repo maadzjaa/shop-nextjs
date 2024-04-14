@@ -11,6 +11,7 @@ export default async function Page() {
 					<article key={post.slug}>
 						<a href={`/blog/${post.slug}`}>
 							<p>{post.date}</p>
+							<img src={post.img} alt={post.title} />
 							<h1>{post.title}</h1>
 							<p>{post.description}</p>
 						</a>
