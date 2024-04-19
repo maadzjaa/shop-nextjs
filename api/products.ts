@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
+import { json } from 'stream/consumers';
 
 export interface Product {
 	id: number;
@@ -28,7 +29,6 @@ export default async function getProducts(limit?: number): Promise<Product[]> {
 	}
 }
 
-
 export async function getProductById(id: string) {
 	const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
 		next: {
@@ -41,4 +41,38 @@ export async function getProductById(id: string) {
 	}
 
 	return response.json();
+}
+
+export async function getGraphlQLProducts() {
+	const response = await fetch('http://localhost:4000/', {
+		method: 'POST',
+		body: JSON.stringify({
+			query: `query ExampleQuery {
+			products {
+			  categories {
+				name
+				slug
+			  }
+			  price
+			  name
+			  images {
+				alt
+				src
+			  }
+			  id
+			  description
+			  collections {
+				name
+				slug
+			  }
+			}
+		  }`,
+		}),
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	});
+	const { data } = await response.json();
+
+	return data;
 }
