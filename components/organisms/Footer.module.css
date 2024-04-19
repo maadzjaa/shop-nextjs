@@ -3,6 +3,7 @@
 	max-width: 90vw;
 	padding: 20px 0 40px 0;
 	border-top: 2px solid var(--neutral-light-gray);
+	margin-top: 50px;
 }
 
 .topFooter,

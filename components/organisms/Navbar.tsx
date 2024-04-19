@@ -23,7 +23,7 @@ export default function Navbar() {
 				<Link href='/cart'>
 					<IoCartOutline size={30} />
 				</Link>
-				<Link href='/cart'>
+				<Link href='/login'>
 					<CiUser size={30} />
 				</Link>
 			</div>
