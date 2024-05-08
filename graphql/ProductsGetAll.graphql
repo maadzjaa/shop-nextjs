@@ -1,0 +1,28 @@
+query ProductsGetAll($take: Int!, $skip: Int!) {
+	products(take: $take, skip: $skip) {
+		id
+		name
+		description
+		price
+		images {
+			url
+			alt
+		}
+		collections {
+			name
+			slug
+		}
+		categories {
+			name
+			slug
+		}
+		reviews {
+			id
+			author
+			email
+			comment
+			rating
+			createdAt
+		}
+	}
+}

@@ -1,0 +1,28 @@
+query ProductsGetById($productId: ID!) {
+	product(id: $productId) {
+		id
+		name
+		description
+		price
+		images {
+			url
+			alt
+		}
+		collections {
+			name
+			slug
+		}
+		categories {
+			name
+			slug
+		}
+		reviews {
+			id
+			author
+			email
+			comment
+			rating
+			createdAt
+		}
+	}
+}
